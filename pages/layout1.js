@@ -12,9 +12,7 @@ export default function Home() {
         <div className="gr__main__content">content</div>
       </div>
       <div className="gr__sidebar">sidebar</div>
-      <div className="gr__footer">
-        <div className="gr__footer__details">footer</div>
-      </div>
+      <div className="gr__footer">footer</div>
     </div>
   );
 }
