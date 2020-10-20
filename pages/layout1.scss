@@ -1,0 +1,109 @@
+.gr {
+  display: grid;
+  width: 100%;
+  background-color: grey;
+  margin: 0 auto;
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 56px auto auto 56px;
+  /* // grid-gap: 10px; */
+
+  grid-template-areas:
+    "nav nav  nav  nav  nav  nav"
+    "hero hero  hero  hero  hero  hero"
+    "main main  main  main  sidebar sidebar"
+    "footer footer footer footer footer footer";
+
+  &__nav {
+    border: 1px solid #eaeaea;
+    background-color: #eaeaea;
+    grid-area: nav;
+  }
+
+  &__hero {
+    background: cornflowerblue;
+    grid-area: hero;
+  }
+
+  &__main {
+    border: 1px solid red;
+    background: #33a8a5;
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: auto auto;
+    /* // grid-gap: 10px; */
+    grid-template-areas:
+      "title title"
+      "article content";
+
+    &__title {
+      background: #da6f2b;
+      grid-area: title;
+    }
+
+    &__article {
+      background: #3d8bb1;
+      grid-area: article;
+    }
+
+    &__content {
+      background: #e03f3f;
+      grid-area: content;
+    }
+  }
+
+  &__sidebar {
+    background: #30997a;
+    grid-area: sidebar;
+  }
+
+  &__footer {
+    background: #6a478f;
+    grid-area: footer;
+
+    &__details {
+    }
+  }
+}
+
+.gr div {
+  color: white;
+  padding: 5px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {
+    background: red;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {
+    background: blue;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: orange;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: pink;
+  }
+}
